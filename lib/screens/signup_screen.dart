@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mycontactsapp/screens/signin_screen.dart';
+import 'package:mycontactsapp/screens/verification_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -245,7 +246,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       borderRadius: BorderRadius.circular(5),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const VerificationScreen(),
+                      ),
+                    );
+                  },
                   child: const Padding(
                     padding: EdgeInsets.only(
                         left: 78, right: 78, top: 15, bottom: 15),
